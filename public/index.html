@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Intelligence Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo">DIA</div>
+            <div>
+                <h1>Document Intelligence Assistant</h1>
+                <p>AI-powered document understanding</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <section class="upload-section">
+                <h2>Upload Your Document</h2>
+                <p>Upload a PDF to start asking questions.</p>
+
+                <input type="file" id="pdfFile" accept=".pdf">
+
+                <button id="uploadBtn">Upload PDF</button>
+
+                <p id="uploadStatus"></p>
+            </section>
+
+            <section class="chat-section">
+                <h2>Ask Your Document</h2>
+
+                <div id="documentInfo">
+                    No document uploaded yet.
+                </div>
+
+                <div id="chatMessages" class="chat-messages">
+                    <div class="welcome-message">
+                        Hello! Upload a PDF and ask me questions about it.
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Ask a question about your document..."
+                    >
+
+                    <button id="sendBtn">Send</button>
+                </div>
+
+                <p id="chatStatus"></p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Document Intelligence Assistant | RAG-based AI System</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

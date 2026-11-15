@@ -1,0 +1,351 @@
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.header h1 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   MAIN LAYOUT
+============================== */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 22px;
+}
+
+.upload-section,
+.chat-section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.upload-section h2,
+.chat-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.upload-section > p {
+    color: #64748b;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   FILE UPLOAD
+============================== */
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px dashed #94a3b8;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#uploadStatus,
+#chatStatus {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   DOCUMENT INFORMATION
+============================== */
+
+#documentInfo {
+    background: #eff6ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 13px;
+    color: #1d4ed8;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==============================
+   CHAT MESSAGES
+============================== */
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.welcome-message {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 10px;
+    max-width: 90%;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.user-message {
+    background: #dbeafe;
+    align-self: flex-end;
+}
+
+.ai-message {
+    background: #f1f5f9;
+    align-self: flex-start;
+}
+
+
+/* ==============================
+   CHAT INPUT
+============================== */
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #2563eb;
+}
+
+
+/* ==============================
+   SOURCE REFERENCES
+============================== */
+
+.sources-container {
+    align-self: flex-start;
+    width: 90%;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+
+.sources-container h4 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.source-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.source-box:last-child {
+    margin-bottom: 0;
+}
+
+.source-box strong {
+    display: block;
+    color: #1e40af;
+    font-size: 13px;
+}
+
+.source-box p {
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.source-box small {
+    color: #64748b;
+    font-size: 11px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   SCROLLBAR
+============================== */
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 750px) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .app-container {
+        padding: 12px;
+    }
+
+    .upload-section,
+    .chat-section {
+        padding: 18px;
+    }
+
+    .chat-messages {
+        height: 350px;
+    }
+
+    .sources-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .header {
+        padding: 15px;
+    }
+
+    .chat-input {
+        flex-direction: column;
+    }
+
+    .chat-input button {
+        width: 100%;
+    }
+
+    .message {
+        max-width: 100%;
+    }
+}
